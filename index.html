@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Together</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Регистрация -->
+        <div id="register" class="page">
+            <h1>Добро пожаловать!</h1>
+            <input type="text" id="username" placeholder="Введите имя">
+            <button onclick="register()">Войти</button>
+        </div>
+
+        <!-- Главная страница -->
+        <div id="main" class="page hidden">
+            <header>
+                <h2>Привет, <span id="userDisplay"></span>!</h2>
+            </header>
+            <section id="recent">
+                <h3>Недавно просмотренные:</h3>
+                <div id="recentVideos">
+                    <p>Здесь пока пусто...</p>
+                </div>
+            </section>
+            <button id="createRoomBtn" onclick="openCreateRoomModal()">+</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно создания комнаты -->
+    <div id="modal" class="hidden">
+        <div class="modal-content">
+            <h3>Создать комнату</h3>
+            <button onclick="createRoom()">Создать</button>
+            <button onclick="closeModal()">Отмена</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
